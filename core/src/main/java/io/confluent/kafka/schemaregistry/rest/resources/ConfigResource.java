@@ -158,7 +158,9 @@ public class ConfigResource {
         @ApiResponse(responseCode = "200", description = "The subject compatibility level.",
             content = @Content(schema = @Schema(implementation = Config.class))),
         @ApiResponse(responseCode = "404",
-            description = "Not Found. Error code 40401 indicates subject not found.",
+            description = "Not Found. "
+                    + "Error code 40401 indicates subject not found. "
+                    + "Error code 40408 indicates subject-level compatibility not found.",
             content = @Content(schema = @Schema(implementation = ErrorMessage.class))),
         @ApiResponse(responseCode = "500",
             description = "Internal Server Error. "
